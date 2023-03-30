@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tweet Your MP</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Twitter API script -->
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</head>
+<body>
+	<!-- Input field for constituency search -->
+	<label for="constituency-search">Search by Constituency:</label>
+	<input type="text" id="constituency-search" name="constituency-search">
+
+	<!-- Select dropdown for MPs -->
+	<select id="mp-select">
+		<option value="">Select an MP</option>
+		<option value="@AaronBell4NUL">Aaron Bell - Newcastle-under-Lyme</option>
+		<option value="@abenaopp">Abena Oppong-Asare - Erith and Thamesmead</option>
+		<option value="@AdamAfriyie">Adam Afriyie - Windsor</option>
+		<option value="@Afzal4Gorton">Afzal Khan - Manchester, Gorton</option>
+		<option value="@AlanBrownSNP">Alan Brown - Kilmarnock and Loudoun</option>
+		<option value="@alancampbellmp">Alan Campbell - Tynemouth</option>
+		<option value="@AlanMakHavant">Alan Mak - Havant</option>
+		<option value="@AlbertoCostaMP">Alberto Costa - South Leicestershire</option>
+		<option value="@AlecShelbrooke">Alec Shelbrooke - Elmet and Rothwell</option>
+		<option value="@alexburghart">Alex Burghart - Brentwood and Ongar</option>
+		<option value="@AlexChalkChelt">Alex Chalk - Cheltenham</option>
+		<option value="@ACunninghamMP">Alex Cunningham - Stockton North</option>
+		<option value="@AlexDaviesJones">Alex Davies-Jones - Pontypridd</option>
+		<option value="@AlexNorrisNN">Alex Norris - Nottingham North</option>
+		<option value="@alexsobel">Alex Sobel - Leeds North West</option>
+		<option value="@Alex_Stafford">Alexander Stafford - Rother Valley</option>
+		<option value="@aliciakearns">Alicia Kearns - Rutland and Melton</option>
+		<option value="@Alison_McGovern">Alison McGovern - Wirral South</option>
+		<option value="@alisonthewliss">Alison Thewliss - Glasgow Central</option>
+		<option value="@amcarmichaelMP">Alistair Carmichael - Orkney and Shetland</option>
+		<option value="@allandorans">Allan Dorans - Ayr, Carrick and Cumnock</option>
+		<option value="@AlokSharma_RDG">Alok Sharma - Reading West</option>
+		<option value="@AlunCairns">Alun Cairns - Vale of Glamorgan</option>
+		<!-- Add more MPs here -->
+	</select>
+
+	<!-- Button to tweet MP -->
+	<button onclick="tweetMP()">Tweet your MP</button>
+
+	<!-- JavaScript function to retrieve MPs by constituency and populate select dropdown -->
+	<script>
+		function searchByConstituency() {
+			var constituency = document.getElementById("constituency-search").value;
+			if (constituency) {
+				// Replace YOUR_API_KEY with
